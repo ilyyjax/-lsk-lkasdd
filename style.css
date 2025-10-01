@@ -1,0 +1,106 @@
+/* --- RESET --- */
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Comic Sans MS', cursive;}
+body {background: #fff8f0; color: #3a2c1a; overflow-x: hidden;}
+h1, h2, h3 {font-family: 'Trebuchet MS', sans-serif;}
+section {padding: 100px 20px; text-align: center;}
+
+/* --- HERO --- */
+.hero {
+  background: linear-gradient(135deg, #f8d5a3, #f9b47c);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: 3rem;
+  animation: pop 1.2s ease infinite alternate;
+}
+.hero p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+.btn {
+  background: #7b3f00;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  transition: transform .3s;
+}
+.btn:hover {transform: scale(1.1) rotate(-3deg);}
+
+/* floating cookies */
+.cookie {
+  position: absolute;
+  width: 80px;
+  animation: float 6s linear infinite;
+}
+.cookie:nth-child(1) {left: 10%; top: 20%; animation-delay: 0s;}
+.cookie:nth-child(2) {left: 80%; top: 40%; animation-delay: 2s;}
+.cookie:nth-child(3) {left: 30%; top: 70%; animation-delay: 4s;}
+
+@keyframes float {
+  0% {transform: translateY(0) rotate(0deg);}
+  50% {transform: translateY(-50px) rotate(180deg);}
+  100% {transform: translateY(0) rotate(360deg);}
+}
+
+@keyframes pop {
+  from {transform: scale(1);}
+  to {transform: scale(1.05);}
+}
+
+/* --- ABOUT --- */
+.about {background: #fff3e6;}
+.grandma {
+  max-width: 300px;
+  margin: auto;
+  animation: wiggle 2s ease-in-out infinite;
+}
+@keyframes wiggle {
+  0%, 100% {transform: rotate(0deg);}
+  25% {transform: rotate(3deg);}
+  75% {transform: rotate(-3deg);}
+}
+
+/* --- COOKIE JAR --- */
+.cookie-jar {
+  background: #ffe5cc;
+  position: relative;
+}
+.jar {
+  width: 200px;
+  margin: 0 auto;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-20px);}
+}
+
+/* --- ROADMAP --- */
+.roadmap {background: #fff8f0;}
+.roadmap-item {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f5d0a9;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform .3s;
+}
+.roadmap-item:hover {transform: scale(1.05);}
+
+/* --- FOOTER --- */
+footer {
+  background: #3a2c1a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
